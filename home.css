@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.To-Do-App {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 30px 20px 70px;
+    border-radius: 10px;
+}
+
+.To-Do-App h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.To-Do-App h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: 100;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 12px 20px; /* הגדלת שטח הכפתור */
+    background-color: orange;
+    color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    border-radius: 40px;
+    cursor: pointer; /* מוסיף סמן אצבע כשלוחצים */
+    z-index: 10; /* מבטיח שהכפתור לא יוסתר על ידי אלמנטים אחרים */
+    pointer-events: auto; /* מוודא שהכפתור מקבל לחיצות */
+}
+
+button:hover {
+    background-color: darkorange; /* שינוי צבע הכפתור בעת ריחוף */
+}
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-image: url('circaleicon.jpg');  /* ודא שהנתיב נכון */
+    background-size: cover; /* ממלא את העיגול בתמונה */
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+
+ul li.check {
+    color: #555;
+    text-decoration: line-through;  
+}
+
+ul li.check::before {
+    background-image: url('createicon.png');  
+}
+
+ul li span {
+    position: absolute;
+    right: 10px; /* הצב את כפתור המחיקה בצד ימין */
+    top: 50%; /* ממקם את כפתור המחיקה במרכז ה-li */
+    transform: translateY(-50%); /* מתקן את המיקום האנכי */
+    width: 30px; /* גודל הכפתור */
+    height: 30px; /* גודל הכפתור */
+    font-size: 20px; /* גודל הטקסט */
+    color: #555; /* צבע טקסט ברירת מחדל */
+    line-height: 30px; /* מיקום הטקסט במרכז */
+    text-align: center; /* מוודא שהטקסט ממורכז */
+    border-radius: 50%; /* יצירת עיגול */
+    cursor: pointer; /* הופך את הסמן לאצבע */
+    
+}
+
+ul li span:hover {
+    background-color: aquamarine; /* צבע בעת ריחוף */
+    color: #000; /* שינוי צבע טקסט בעת ריחוף */
+}
+
+ul li span:nth-child(2) {
+    position: absolute;
+    right: 38px;  /* מיקום כפתור העריכה לפני כפתור המחיקה, 30 פיקסלים לפני */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #555;  /* צבע ירוק */
+    cursor: pointer;
+}
+ul li span :nth-child(2) :hover{
+    background-color: aquamarine;
+    color: #000;
+}
