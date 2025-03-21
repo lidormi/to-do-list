@@ -137,3 +137,24 @@ ul li span :nth-child(2) :hover{
     background-color: aquamarine;
     color: #000;
 }
+
+@media (max-width: 480px) {
+    .To-Do-App {
+        padding: 15px 10px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    ul li {
+        font-size: 14px;
+        padding: 8px 6px 8px 40px;
+    }
+}
